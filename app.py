@@ -17,10 +17,10 @@ def index():
 def getData():
 	
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "admin")
+	session_id = client.connect("root", "f")
 	db_name = "soufun"
-	db_username = "admin"
-	db_password = "admin"
+	db_username = "root"
+	db_password = "f"
 
 	if client.db_exists( db_name, pyorient.STORAGE_TYPE_MEMORY ):
 		client.db_open( db_name, db_username, db_password )
